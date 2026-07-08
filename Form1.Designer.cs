@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel3 = new Panel();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             panel2 = new Panel();
             panel1 = new Panel();
             button2 = new Button();
@@ -42,13 +43,25 @@
             // panel3
             // 
             panel3.BackColor = SystemColors.InactiveBorder;
+            panel3.Controls.Add(flowLayoutPanel1);
             panel3.Controls.Add(panel2);
             panel3.Controls.Add(panel1);
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1810, 780);
+            panel3.Size = new Size(1810, 764);
             panel3.TabIndex = 2;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.Dock = DockStyle.Bottom;
+            flowLayoutPanel1.Location = new Point(0, 178);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Padding = new Padding(10);
+            flowLayoutPanel1.Size = new Size(1810, 586);
+            flowLayoutPanel1.TabIndex = 2;
+            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
             // panel2
             // 
@@ -71,7 +84,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(1631, 39);
+            button2.Location = new Point(1637, 39);
             button2.Name = "button2";
             button2.Size = new Size(135, 56);
             button2.TabIndex = 2;
@@ -83,7 +96,7 @@
             // 
             textBox1.BorderStyle = BorderStyle.FixedSingle;
             textBox1.Font = new Font("Segoe UI Symbol", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(315, 83);
+            textBox1.Location = new Point(625, 55);
             textBox1.MaximumSize = new Size(400, 40);
             textBox1.MinimumSize = new Size(0, 40);
             textBox1.Name = "textBox1";
@@ -107,12 +120,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1810, 780);
+            ClientSize = new Size(1810, 764);
             Controls.Add(panel3);
             Name = "Form1";
             StartPosition = FormStartPosition.WindowsDefaultBounds;
             Text = "Form1";
             WindowState = FormWindowState.Maximized;
+            Load += Form1_Load;
             panel3.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -126,5 +140,6 @@
         private Button button1;
         private Panel panel2;
         private Button button2;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }
