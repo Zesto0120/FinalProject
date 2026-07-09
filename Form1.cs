@@ -76,10 +76,22 @@ namespace FinalProject
 
             card.ProductName = "AMD Ryzen 7 7800X3D";
             card.Price = "₱26,095.00";
-        string imagePath = Path.Combine(Application.StartupPath, "Images", "Screenshot 2026-07-08 153341.png");
-        card.ProductImage = Image.FromFile(imagePath);
+            string imagePath = Path.Combine(Application.StartupPath, "Images", "Screenshot 2026-07-08 153341.png");
+            card.ProductImage = Image.FromFile(imagePath);
 
-        flowLayoutPanel1.Controls.Add(card);
+
+
+
+
+            flowLayoutPanel1.Controls.Add(card);
+        }
+
+        private void productCard2_Load(object sender, EventArgs e)
+        {
+
+
+
+
         }
     }
 }
