@@ -36,6 +36,7 @@
             button2 = new Button();
             textBox1 = new TextBox();
             button1 = new Button();
+            button3 = new Button();
             panel3.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -56,10 +57,10 @@
             // 
             flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.Dock = DockStyle.Bottom;
-            flowLayoutPanel1.Location = new Point(0, 178);
+            flowLayoutPanel1.Location = new Point(0, 170);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Padding = new Padding(10);
-            flowLayoutPanel1.Size = new Size(1810, 586);
+            flowLayoutPanel1.Size = new Size(1810, 594);
             flowLayoutPanel1.TabIndex = 2;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
@@ -74,6 +75,7 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.InactiveCaptionText;
+            panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(button1);
@@ -103,7 +105,7 @@
             textBox1.Size = new Size(400, 40);
             textBox1.TabIndex = 1;
             textBox1.Text = "Search";
-            textBox1.TextChanged += textBox1_TextChanged;
+            
             // 
             // button1
             // 
@@ -115,6 +117,16 @@
             button1.Size = new Size(254, 135);
             button1.TabIndex = 0;
             button1.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
+            button3.BackgroundImageLayout = ImageLayout.Stretch;
+            button3.Location = new Point(1554, 39);
+            button3.Name = "button3";
+            button3.Size = new Size(62, 58);
+            button3.TabIndex = 3;
+            button3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -141,5 +153,6 @@
         private Panel panel2;
         private Button button2;
         private FlowLayoutPanel flowLayoutPanel1;
+        private Button button3;
     }
 }
