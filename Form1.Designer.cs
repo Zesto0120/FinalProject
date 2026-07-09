@@ -36,7 +36,10 @@
             button2 = new Button();
             textBox1 = new TextBox();
             button1 = new Button();
+            productCard1 = new ProductCard();
+            productCard2 = new ProductCard();
             panel3.SuspendLayout();
+            flowLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -55,6 +58,8 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.Controls.Add(productCard1);
+            flowLayoutPanel1.Controls.Add(productCard2);
             flowLayoutPanel1.Dock = DockStyle.Bottom;
             flowLayoutPanel1.Location = new Point(0, 178);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -116,6 +121,21 @@
             button1.TabIndex = 0;
             button1.UseVisualStyleBackColor = true;
             // 
+            // productCard1
+            // 
+            productCard1.Location = new Point(13, 13);
+            productCard1.Name = "productCard1";
+            productCard1.Size = new Size(278, 383);
+            productCard1.TabIndex = 0;
+            // 
+            // productCard2
+            // 
+            productCard2.Location = new Point(297, 13);
+            productCard2.Name = "productCard2";
+            productCard2.Size = new Size(278, 383);
+            productCard2.TabIndex = 1;
+            productCard2.Load += productCard2_Load;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -128,6 +148,7 @@
             WindowState = FormWindowState.Maximized;
             Load += Form1_Load;
             panel3.ResumeLayout(false);
+            flowLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -141,5 +162,7 @@
         private Panel panel2;
         private Button button2;
         private FlowLayoutPanel flowLayoutPanel1;
+        private ProductCard productCard1;
+        private ProductCard productCard2;
     }
 }
