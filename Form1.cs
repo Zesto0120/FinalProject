@@ -8,7 +8,7 @@ namespace FinalProject
     {
         private Panel pnlLogin; // Changed type from object to Panel
         private Panel pnlSignUp; // Changed type from object to Panel
-        
+
 
         public Form1()
         {
@@ -92,6 +92,12 @@ namespace FinalProject
 
 
 
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            Market market = new Market();
+            market.Show();
         }
     }
 }

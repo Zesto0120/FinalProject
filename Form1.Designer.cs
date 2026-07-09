@@ -36,7 +36,7 @@
             button2 = new Button();
             textBox1 = new TextBox();
             button1 = new Button();
-            button3 = new Button();
+            btnMarket = new Button();
             panel3.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -75,7 +75,7 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.InactiveCaptionText;
-            panel1.Controls.Add(button3);
+            panel1.Controls.Add(btnMarket);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(button1);
@@ -117,15 +117,16 @@
             button1.TabIndex = 0;
             button1.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnMarket
             // 
-            button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
-            button3.BackgroundImageLayout = ImageLayout.Stretch;
-            button3.Location = new Point(1556, 39);
-            button3.Name = "button3";
-            button3.Size = new Size(61, 56);
-            button3.TabIndex = 3;
-            button3.UseVisualStyleBackColor = true;
+            btnMarket.BackgroundImage = (Image)resources.GetObject("btnMarket.BackgroundImage");
+            btnMarket.BackgroundImageLayout = ImageLayout.Stretch;
+            btnMarket.Location = new Point(1556, 39);
+            btnMarket.Name = "btnMarket";
+            btnMarket.Size = new Size(61, 56);
+            btnMarket.TabIndex = 3;
+            btnMarket.UseVisualStyleBackColor = true;
+            btnMarket.Click += button3_Click_1;
             // 
             // Form1
             // 
@@ -152,6 +153,6 @@
         private Panel panel2;
         private Button button2;
         private FlowLayoutPanel flowLayoutPanel1;
-        private Button button3;
+        private Button btnMarket;
     }
 }
