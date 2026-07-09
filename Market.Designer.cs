@@ -38,12 +38,12 @@
             mbtnMarket.Depth = 0;
             mbtnMarket.HighEmphasis = true;
             mbtnMarket.Icon = null;
-            mbtnMarket.Location = new Point(501, 551);
+            mbtnMarket.Location = new Point(569, 560);
             mbtnMarket.Margin = new Padding(4, 6, 4, 6);
             mbtnMarket.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnMarket.Name = "mbtnMarket";
             mbtnMarket.NoAccentTextColor = Color.Empty;
-            mbtnMarket.Size = new Size(158, 36);
+            mbtnMarket.Size = new Size(90, 36);
             mbtnMarket.TabIndex = 0;
             mbtnMarket.Text = "Payment";
             mbtnMarket.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
