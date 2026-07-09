@@ -36,8 +36,8 @@
             button2 = new Button();
             textBox1 = new TextBox();
             button1 = new Button();
+            button3 = new Button();
             panel3.SuspendLayout();
-            flowLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -75,6 +75,7 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.InactiveCaptionText;
+            panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(button1);
@@ -97,14 +98,13 @@
             // 
             textBox1.BorderStyle = BorderStyle.FixedSingle;
             textBox1.Font = new Font("Segoe UI Symbol", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(625, 55);
+            textBox1.Location = new Point(645, 55);
             textBox1.MaximumSize = new Size(400, 40);
             textBox1.MinimumSize = new Size(0, 40);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(400, 40);
             textBox1.TabIndex = 1;
             textBox1.Text = "Search";
-            
             // 
             // button1
             // 
@@ -116,6 +116,16 @@
             button1.Size = new Size(254, 135);
             button1.TabIndex = 0;
             button1.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
+            button3.BackgroundImageLayout = ImageLayout.Stretch;
+            button3.Location = new Point(1556, 39);
+            button3.Name = "button3";
+            button3.Size = new Size(61, 56);
+            button3.TabIndex = 3;
+            button3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -129,7 +139,6 @@
             WindowState = FormWindowState.Maximized;
             Load += Form1_Load;
             panel3.ResumeLayout(false);
-            flowLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -143,5 +152,6 @@
         private Panel panel2;
         private Button button2;
         private FlowLayoutPanel flowLayoutPanel1;
+        private Button button3;
     }
 }
