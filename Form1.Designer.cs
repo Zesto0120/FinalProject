@@ -36,10 +36,8 @@
             button2 = new Button();
             textBox1 = new TextBox();
             button1 = new Button();
-            productCard1 = new ProductCard();
-            productCard2 = new ProductCard();
+            btnMarket = new Button();
             panel3.SuspendLayout();
-            flowLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -58,13 +56,11 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.Controls.Add(productCard1);
-            flowLayoutPanel1.Controls.Add(productCard2);
             flowLayoutPanel1.Dock = DockStyle.Bottom;
-            flowLayoutPanel1.Location = new Point(0, 178);
+            flowLayoutPanel1.Location = new Point(0, 170);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Padding = new Padding(10);
-            flowLayoutPanel1.Size = new Size(1810, 586);
+            flowLayoutPanel1.Size = new Size(1810, 594);
             flowLayoutPanel1.TabIndex = 2;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
@@ -79,6 +75,7 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.InactiveCaptionText;
+            panel1.Controls.Add(btnMarket);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(button1);
@@ -101,14 +98,13 @@
             // 
             textBox1.BorderStyle = BorderStyle.FixedSingle;
             textBox1.Font = new Font("Segoe UI Symbol", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(625, 55);
+            textBox1.Location = new Point(645, 55);
             textBox1.MaximumSize = new Size(400, 40);
             textBox1.MinimumSize = new Size(0, 40);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(400, 40);
             textBox1.TabIndex = 1;
             textBox1.Text = "Search";
-            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // button1
             // 
@@ -121,20 +117,16 @@
             button1.TabIndex = 0;
             button1.UseVisualStyleBackColor = true;
             // 
-            // productCard1
+            // btnMarket
             // 
-            productCard1.Location = new Point(13, 13);
-            productCard1.Name = "productCard1";
-            productCard1.Size = new Size(278, 383);
-            productCard1.TabIndex = 0;
-            // 
-            // productCard2
-            // 
-            productCard2.Location = new Point(297, 13);
-            productCard2.Name = "productCard2";
-            productCard2.Size = new Size(278, 383);
-            productCard2.TabIndex = 1;
-            productCard2.Load += productCard2_Load;
+            btnMarket.BackgroundImage = (Image)resources.GetObject("btnMarket.BackgroundImage");
+            btnMarket.BackgroundImageLayout = ImageLayout.Stretch;
+            btnMarket.Location = new Point(1556, 39);
+            btnMarket.Name = "btnMarket";
+            btnMarket.Size = new Size(61, 56);
+            btnMarket.TabIndex = 3;
+            btnMarket.UseVisualStyleBackColor = true;
+            btnMarket.Click += button3_Click_1;
             // 
             // Form1
             // 
@@ -148,7 +140,6 @@
             WindowState = FormWindowState.Maximized;
             Load += Form1_Load;
             panel3.ResumeLayout(false);
-            flowLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -162,7 +153,6 @@
         private Panel panel2;
         private Button button2;
         private FlowLayoutPanel flowLayoutPanel1;
-        private ProductCard productCard1;
-        private ProductCard productCard2;
+        private Button btnMarket;
     }
 }

@@ -9,9 +9,16 @@ namespace FinalProject
         private Panel pnlLogin; // Changed type from object to Panel
         private Panel pnlSignUp; // Changed type from object to Panel
 
+
         public Form1()
         {
             InitializeComponent();
+
+            textBox1.Text = "Search";
+            textBox1.ForeColor = Color.Gray;
+
+            textBox1.Enter += textBox1_Enter;
+            textBox1.Leave += textBox1_Leave;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -19,9 +26,22 @@ namespace FinalProject
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void textBox1_Enter(object sender, EventArgs e)
         {
+            if (textBox1.Text == "Search")
+            {
+                textBox1.Text = "";
+                textBox1.ForeColor = Color.Black;
+            }
+        }
 
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                textBox1.Text = "Search";
+                textBox1.ForeColor = Color.Gray;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -72,6 +92,12 @@ namespace FinalProject
 
 
 
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            Market market = new Market();
+            market.Show();
         }
     }
 }
