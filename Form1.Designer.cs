@@ -56,8 +56,6 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.Controls.Add(productCard1);
-            flowLayoutPanel1.Controls.Add(productCard2);
             flowLayoutPanel1.Dock = DockStyle.Bottom;
             flowLayoutPanel1.Location = new Point(0, 170);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -77,7 +75,6 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.InactiveCaptionText;
-            panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(button1);
